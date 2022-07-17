@@ -1,7 +1,15 @@
-/** union type  */
+/** literal type  */
 
-const plus = (a: number | string, b: number | string) => {
-  return +a + +b
+const logger = (
+  a: number | string,
+  b: number | string,
+  resultConversion: 'as-number' | 'as-string'
+) => {
+  if (typeof a === 'number' || typeof b === 'number' || resultConversion === 'as-number') {
+    return +a + +b
+  } else {
+    return a + b
+  }
 }
 
-plus(1, 2)
+console.log(logger(1, 2, 'as-number'))
