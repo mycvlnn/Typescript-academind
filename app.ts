@@ -1,6 +1,12 @@
-const logger = (num1: number, num2: number) => num1 + num2
+/** 1. Type Inference */
+const number = 1
 
-const number1 = 1
-const number2 = 2
+const str = 'Hello world'
 
-logger(number1, number2)
+/** 2. Type Assignment */
+
+let num: number
+
+num = 123
+
+const calc = (a: number, b: number) => a + b
