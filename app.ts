@@ -1,11 +1,11 @@
-/**  Function Type and callback  */
+/**  unknown type */
 
-function addAndHandle(n1: number, n2: number, cb: (num: number) => void) {
-  const result = n1 + n2
+let userInput: unknown
+let userName: string
 
-  cb(result)
+userInput = 5
+userInput = 'Max'
+
+if (typeof userInput === 'string') {
+  userName = userInput
 }
-
-addAndHandle(1, 2, (result) => {
-  console.log(result)
-})
