@@ -1,18 +1,7 @@
-/** enum type  */
+/** union type  */
 
-enum Direction {
-  Up = 1,
-  Down,
-  Left,
-  Right
+const plus = (a: number | string, b: number | string) => {
+  return +a + +b
 }
 
-const myLocation = {
-  id: 1,
-  name: 'Ha Noi',
-  left: Direction.Left
-}
-
-if (myLocation.left === Direction.Left) {
-  console.log('Matched direction')
-}
+plus(1, 2)
