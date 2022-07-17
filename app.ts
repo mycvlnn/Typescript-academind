@@ -1,11 +1,26 @@
-/**  function return types and void   */
+/**  Function Type   */
 
-// Trường hợp không trả về giá trị ( undefined)
-const logger = (): void => {
-  console.log('Hello world')
+function add(n1: number, n2: number) {
+  return n1 + n2
 }
 
-// Trường hợp trả về number
-const plus = (a: number, b: number): number => {
-  return a + b
+function printResult(num: number): void {
+  console.log('Result: ' + num)
 }
+
+// Function type
+
+let combineValue1: Function
+
+combineValue1 = printResult
+combineValue1 = add
+
+//combineValue1(1, 2) // Như này sẽ lỗi
+
+// Định nghĩa type cụ thể
+
+let combineValues: (a: number, b: number) => number
+
+combineValues = add
+
+//combineValues = printResult //type '(num: number) => void' is not assignable to type '(a: number, b: number) => number'. Type 'void' is not assignable to type 'number'.ts(2322)
