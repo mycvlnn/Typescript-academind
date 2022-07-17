@@ -1,15 +1,11 @@
-/**  type alias  */
+/**  function return types and void   */
 
-type InputLogger = number | string
-
-type ResultConversion = 'as-number' | 'as-string'
-
-const logger = (a: InputLogger, b: InputLogger, resultConversion: ResultConversion) => {
-  if (typeof a === 'number' || typeof b === 'number' || resultConversion === 'as-number') {
-    return +a + +b
-  } else {
-    return a + b
-  }
+// Trường hợp không trả về giá trị ( undefined)
+const logger = (): void => {
+  console.log('Hello world')
 }
 
-console.log(logger(1, 2, 'as-number'))
+// Trường hợp trả về number
+const plus = (a: number, b: number): number => {
+  return a + b
+}
