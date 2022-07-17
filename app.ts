@@ -1,32 +1,23 @@
-/** object type  */
+/** array type  */
 
 interface Person {
   name: string
   age: number
+  hobbies: string[]
 }
 
 const phuong: Person = {
   name: 'Le Thi Phuong',
-  age: 22
+  age: 22,
+  hobbies: ['Sports', 'Cooking', 'Play game']
 }
 
-// --------
-
-const chris: { fullName: string; birthDay: string } = {
-  fullName: 'Chris Lee',
-  birthDay: '04/07/1999'
+for (const hobby of phuong.hobbies) {
+  console.log(hobby)
 }
 
-// ----------
+// -------------------
 
-type Animal = {
-  kind: string
-  name: string
-  height: number
-}
+let number: number[]
 
-const dog: Animal = {
-  kind: 'Co vu',
-  name: 'Oggy',
-  height: 0.5
-}
+number = [12, 23, 2, 34, 343]
