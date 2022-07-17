@@ -1,11 +1,7 @@
-/**  unknown type */
+/**  never type */
 
-let userInput: unknown
-let userName: string
-
-userInput = 5
-userInput = 'Max'
-
-if (typeof userInput === 'string') {
-  userName = userInput
+const getErrorResponse = (message: string, code: number): never => {
+  throw { message, code }
 }
+
+getErrorResponse('Error server', 500)
