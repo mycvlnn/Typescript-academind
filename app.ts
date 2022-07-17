@@ -1,12 +1,32 @@
-/** 1. Type Inference */
-const number = 1
+/** object type  */
 
-const str = 'Hello world'
+interface Person {
+  name: string
+  age: number
+}
 
-/** 2. Type Assignment */
+const phuong: Person = {
+  name: 'Le Thi Phuong',
+  age: 22
+}
 
-let num: number
+// --------
 
-num = 123
+const chris: { fullName: string; birthDay: string } = {
+  fullName: 'Chris Lee',
+  birthDay: '04/07/1999'
+}
 
-const calc = (a: number, b: number) => a + b
+// ----------
+
+type Animal = {
+  kind: string
+  name: string
+  height: number
+}
+
+const dog: Animal = {
+  kind: 'Co vu',
+  name: 'Oggy',
+  height: 0.5
+}
