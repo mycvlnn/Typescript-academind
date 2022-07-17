@@ -1,10 +1,10 @@
-/** literal type  */
+/**  type alias  */
 
-const logger = (
-  a: number | string,
-  b: number | string,
-  resultConversion: 'as-number' | 'as-string'
-) => {
+type InputLogger = number | string
+
+type ResultConversion = 'as-number' | 'as-string'
+
+const logger = (a: InputLogger, b: InputLogger, resultConversion: ResultConversion) => {
   if (typeof a === 'number' || typeof b === 'number' || resultConversion === 'as-number') {
     return +a + +b
   } else {
