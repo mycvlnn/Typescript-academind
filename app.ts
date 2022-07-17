@@ -1,15 +1,18 @@
-/** tupple type  */
+/** enum type  */
 
-interface Person {
-  name: string
-  age: number
-  hobbies: string[]
-  role: [number, string] // tupple
+enum Direction {
+  Up = 1,
+  Down,
+  Left,
+  Right
 }
 
-const phuong: Person = {
-  name: 'Le Thi Phuong',
-  age: 22,
-  hobbies: ['Sports', 'Cooking', 'Play game'],
-  role: [1, 'Author']
+const myLocation = {
+  id: 1,
+  name: 'Ha Noi',
+  left: Direction.Left
+}
+
+if (myLocation.left === Direction.Left) {
+  console.log('Matched direction')
 }
