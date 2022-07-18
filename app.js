@@ -1,5 +1,3 @@
+"use strict";
 /**  never type */
-var getErrorResponse = function (message, code) {
-    throw { message: message, code: code };
-};
-getErrorResponse('Error server', 500);
+console.log('Xin chao viet nam');
